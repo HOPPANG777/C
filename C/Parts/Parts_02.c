@@ -44,4 +44,37 @@ void DataSize()
 	// 프로그램
 	// OS
 	// 가상메모리
+	// 
+	// 배열 -> O(1)
+	// 램 기준에서 가장 최소 공간이 1bit
+	// 1 Bit -> 0 or 1 (전기 신호가 통하면 0 통하지 않으면 1)
+	// 1 Byte -> 8bit -> 0or1 0or1 0or1 0or1 0or1 0or1 0or1 0or1 -> 256 경우의 수
+	// int -> 4byte -> 32bit -> 2^32 
+
+	char ch = 'A';	// 65
+	// 1byte
+	// 문자 or 정수 1개
+	// 'A' -> 정수
+	
+	short shortNum = 10;
+	int integerNum = 20;
+	long longNum = 30;
+	long long longLongNum = 40;
+	
+	printf("===== 문자형 출력 =====\n");
+	printf("Char (%llu) : %c\n\n", sizeof(ch), ch);
+
+	printf("===== 정수형 출력 =====\n");
+	printf("short (%llu) : %d\n\n", sizeof(shortNum), shortNum);
+	printf("int (%llu) : %d\n\n", sizeof(integerNum), integerNum);
+	printf("long (%llu) : %d\n\n", sizeof(longNum), longNum);
+	printf("long long (%llu) : %lld\n\n", sizeof(longLongNum), longLongNum);
+
+
+
+	// long long unsigned
+	// unsigned -> 부호가 없는 (음수를 표현하지 않음)
+	// unsigned -> signed -> 부호가 있는 (음수를 표현함)
+	// sizeof(ch) -> sizeof 연산자 () 안의 데이터(자료) 혹은 자료형의 크기를 나타낸다.
+	//  
 }
