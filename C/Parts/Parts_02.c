@@ -5,8 +5,8 @@
 
 void Parts_02()
 {
-	DataSize();
-	// DataRange();
+	// DataSize();
+	DataRange();
 }
 
 void DataSize()
@@ -128,7 +128,34 @@ void DataSize()
 	+- 0.000110011001100
 	1.10011001100110011001100
 
+	IEEE
+	Round-up
 	0(부호) 10011001100110011001100(가수) * 2^-4(지수)
+
+	지수
+	bias
+	(8bit)127
+	중간값 
+	2의보수법
+
+	우리가 일반적으로 활용하는 8bit를 활용을 해서 언사인 시켜야하는데 어려워서 bias값을 사용한다.
+	1000 0000 -4
+	0.1f <- 이걸
+	0(부호) 01111011(지수) 10011001100110011001101(가수) <- 컴퓨터는 이러한 방식으로 기억을 한다
+	1.10011001100110011001101 * 2^-4
+	= 0.00011001100110011001101
+	= 0.0625 + 0.03125 + 0.015625 + 0.00390625 + 0.001953125 + 암튼 1이 있는건 반띵 해서 더한다
+	0000 0000 <- 여기서 1식 올라가면 2의 배수 
+	0000 0001 <- 1
+	0000 0011 <- 2
+	0000 0101 <- 5
+	근데 
+	0000 0001.1 <- 이렇게 소수점 찍고 가면은 2분의 1배 즉 반띵
+
+	
+
+	가수하고 지수의 크기가 바뀔뿐이다 그냥 자리수를 더 많이 저장하는것
+	정밀도는 올라간다 근데 그거 조차도 무한소수이기 때문에 동일한 값을 저장하는게 어렵다
 
 	*/
 	// %llu 64bit 부호가 없는 정수
@@ -144,14 +171,24 @@ void DataRange()
 	// 정수 오버플로우
 	// signed <-> unsigned
 	// 최상위 비트를 부호 비트로 사용하느냐 아니냐
-	printf("char의 범위 : %d ~ %d\n", SCHAR_MIN, SCHAR_MAX);
-	printf("unsigned char의 범위 : %u ~ %u\n", 0U, UCHAR_MAX);
-	printf("short의 범위 : %d ~ %d\n", SHRT_MIN, SHRT_MAX);
-	printf("unsigned short의 범위 : %u ~ %u\n", 0U, USHRT_MAX);
-	printf("int의 범위 : %d ~ %d\n", INT_MIN, INT_MAX);
-	printf("unsigned int의 범위 : %u ~ %u\n", 0u, UINT_MAX);
-	printf("long의 범위 : %d ~ %d\n", LONG_MIN, LONG_MAX);
-	printf("unsigned long의 범위 : %u ~ %u\n", 0u, ULONG_MAX);
-	printf("long long의 범위 : -%llu ~ %llu\n", LLONG_MIN, LLONG_MAX);
-	printf("unsigned long long의 범위 : %u ~ %llu\n", 0u, ULLONG_MAX);
+	printf("===== 부호의 범위 출력 =====\n");
+
+	printf("char의 범위 : %d ~ %d\n\n", SCHAR_MIN, SCHAR_MAX);
+	printf("unsigned char의 범위 : %u ~ %u\n\n", 0U, UCHAR_MAX);
+
+	printf("short의 범위 : %d ~ %d\n\n", SHRT_MIN, SHRT_MAX);
+	printf("unsigned short의 범위 : %u ~ %u\n\n", 0U, USHRT_MAX);
+
+	printf("int의 범위 : %d ~ %d\n\n", INT_MIN, INT_MAX);
+	printf("unsigned int의 범위 : %u ~ %u\n\n", 0u, UINT_MAX);
+
+	printf("long의 범위 : %d ~ %d\n\n", LONG_MIN, LONG_MAX);
+	printf("unsigned long의 범위 : %u ~ %u\n\n", 0u, ULONG_MAX);
+
+	printf("long long의 범위 : -%llu ~ %llu\n\n", LLONG_MIN, LLONG_MAX);
+	printf("unsigned long long의 범위 : %u ~ %llu\n\n", 0u, ULLONG_MAX);
+
+	printf("float의 범위 : %f ~ %f ~ %f\n\n", -FLT_MAX, FLT_MIN, FLT_MAX);
+	printf("double의 범위 : %lf ~ %lf ~ %lf\n\n", -DBL_MAX, DBL_MIN, DBL_MAX);
+
 }
