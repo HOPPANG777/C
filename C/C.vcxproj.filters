@@ -6,6 +6,9 @@
     <ClCompile Include="Parts\Parts_01.c">
       <Filter>Parts_01%28Hello_World%29</Filter>
     </ClCompile>
+    <ClCompile Include="Parts\Parts_02.c" />
+    <ClCompile Include="Parts\Parts_03.c" />
+    <ClCompile Include="Parts\Parts_04.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -13,6 +16,9 @@
     <ClInclude Include="Parts\Parts_01.h">
       <Filter>Parts_01%28Hello_World%29</Filter>
     </ClInclude>
+    <ClInclude Include="Parts\Parts_02.h" />
+    <ClInclude Include="Parts\Parts_03.h" />
+    <ClInclude Include="Parts\Parts_04.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Parts_01%28Hello_World%29">
