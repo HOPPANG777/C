@@ -9,7 +9,8 @@ int main(void)	// <- main함수로
 {
 	// return -> 함수를 종료
 	// Parts_01();
-	Parts_02();
+	// Parts_02();
+	Parts_03();
 	
 	return 0; // 숫자0 코드를 변환하고 main함수를 종료 (main함수의 정상적 종료)
 }
