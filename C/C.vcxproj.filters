@@ -6,9 +6,15 @@
     <ClCompile Include="Parts\Parts_01.c">
       <Filter>Parts_01%28Hello_World%29</Filter>
     </ClCompile>
-    <ClCompile Include="Parts\Parts_02.c" />
-    <ClCompile Include="Parts\Parts_03.c" />
-    <ClCompile Include="Parts\Parts_04.c" />
+    <ClCompile Include="Parts\Parts_02.c">
+      <Filter>Parts_02%28Data_Type%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Parts\Parts_03.c">
+      <Filter>Parts_03%28Operator%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Parts\Parts_04.c">
+      <Filter>Parts_04%28%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -16,13 +22,28 @@
     <ClInclude Include="Parts\Parts_01.h">
       <Filter>Parts_01%28Hello_World%29</Filter>
     </ClInclude>
-    <ClInclude Include="Parts\Parts_02.h" />
-    <ClInclude Include="Parts\Parts_03.h" />
-    <ClInclude Include="Parts\Parts_04.h" />
+    <ClInclude Include="Parts\Parts_02.h">
+      <Filter>Parts_02%28Data_Type%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Parts\Parts_03.h">
+      <Filter>Parts_03%28Operator%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Parts\Parts_04.h">
+      <Filter>Parts_04%28%29</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Parts_01%28Hello_World%29">
       <UniqueIdentifier>{ff3e88c6-e711-407f-8b2c-d11206e63bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parts_02%28Data_Type%29">
+      <UniqueIdentifier>{6fb88964-060a-4c15-82b0-2a577487844c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parts_03%28Operator%29">
+      <UniqueIdentifier>{975da606-33ed-4025-a6b6-67f068f25acd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parts_04%28%29">
+      <UniqueIdentifier>{d2d99aa2-e5db-47b7-8d1f-e01c2c7571da}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
