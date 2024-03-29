@@ -24,6 +24,7 @@
     <ClCompile Include="Parts\Parts_02.c" />
     <ClCompile Include="Parts\Parts_03.c" />
     <ClCompile Include="Parts\Parts_04.c" />
+    <ClCompile Include="Parts\Parts_05.c" />
     <ClCompile Include="stdafx.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -35,6 +36,7 @@
     <ClInclude Include="Parts\Parts_02.h" />
     <ClInclude Include="Parts\Parts_03.h" />
     <ClInclude Include="Parts\Parts_04.h" />
+    <ClInclude Include="Parts\Parts_05.h" />
     <ClInclude Include="Parts\Parts_List.h" />
     <ClInclude Include="Parts\Parts_01.h" />
     <ClInclude Include="stdafx.h" />
