@@ -3,8 +3,8 @@
 
 void Parts_05()
 {
-	While();
-	DoWhile();
+	// While();
+	// DoWhile();
 	For();
 }
 
@@ -49,27 +49,48 @@ void While()
 	printf("반복 횟수 입력 : ");
 	scanf("%d", &times);
 
-	//while (i < times)
-	//{
-	//	printf("%d, ", ++i);
-
-	//	break;
-	//}
-
-	for (int i = 0; i < times; i++)
+	while (i < times)
 	{
-		for (int j = 0; j < i + 1; j++)
-		{
-			printf("*");
-		}
-	printf("\n");
+		printf("%d, ", ++i);
+
+		break;
 	}
 }
 
 void DoWhile()
 {
+	int i = 0;
+	int times = 0;
+
+	printf("반복 횟수 입력 : ");
+	scanf("%d", &times);
+
+	do
+	{
+		printf("%d, ", ++i);
+	} while (i < times);
 }
 
 void For()
 {
+	int times = 0;
+
+	printf("반복 횟수 입력 : ");
+	scanf("%d", &times);
+
+	/*
+	for (초기절; 조건절; 반복절)
+	{
+
+	}
+
+	초기절 - for문에 처음 들어올 떄 실행할 구문
+	반복절 - 반복이 될 때마다 실행할 구문
+	*/
+
+	for (int i = 0; i < times; ++i)
+	{
+		printf("%d, ", i + 1);
+	}
+
 }
