@@ -10,5 +10,6 @@
 #include <time.h>
 #include <Windows.h>
 #include <string.h>
+#include <stdbool.h>
 
 #pragma warning(disable : 6031)
