@@ -13,7 +13,7 @@
       <Filter>Parts_03%28Operator%29</Filter>
     </ClCompile>
     <ClCompile Include="Parts\Parts_04.c">
-      <Filter>Parts_04%28%29</Filter>
+      <Filter>Parts_04%28If%29</Filter>
     </ClCompile>
     <ClCompile Include="Parts\Parts_05.c">
       <Filter>Parts_05%28Loop%29</Filter>
@@ -32,7 +32,7 @@
       <Filter>Parts_03%28Operator%29</Filter>
     </ClInclude>
     <ClInclude Include="Parts\Parts_04.h">
-      <Filter>Parts_04%28%29</Filter>
+      <Filter>Parts_04%28If%29</Filter>
     </ClInclude>
     <ClInclude Include="Parts\Parts_05.h">
       <Filter>Parts_05%28Loop%29</Filter>
@@ -48,11 +48,11 @@
     <Filter Include="Parts_03%28Operator%29">
       <UniqueIdentifier>{975da606-33ed-4025-a6b6-67f068f25acd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Parts_04%28%29">
-      <UniqueIdentifier>{d2d99aa2-e5db-47b7-8d1f-e01c2c7571da}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Parts_05%28Loop%29">
       <UniqueIdentifier>{bfb04760-ea09-4e1c-89b0-6a2c392eb150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parts_04%28If%29">
+      <UniqueIdentifier>{d2d99aa2-e5db-47b7-8d1f-e01c2c7571da}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
