@@ -90,6 +90,14 @@ void For()
 
 	for (int i = 0; i < times; ++i)
 	{
+		//for (int j = 0; j < i; ++j)
+		//{
+		//	if (true)
+		//		break;
+		//}
+		if ((i + 1) % 2 == 0)
+			continue;
+
 		printf("%d, ", i + 1);
 	}
 
