@@ -46,7 +46,7 @@ void Array()
 	// 배열 길이 = 배열 전체 크기 / 원소 1개 크기
 	// 원소 1개 크기 * 배열 길이 = 배열 전체 크기
 
-	const int size2 = sizeof(arr2) / sizeof(arr2[0]); // 
+	const int size2 = sizeof(arr2) / sizeof(arr2[0]); // 이렇게 하면 배열의 자료형이 바뀌어도 대응된다
 
 	// const int a = 10;
 	// a += 1; // const 들어간거는 바꾸지 말란 소리다 신입으로 들어가서 이런거 바꾸면 이제 팀장님 한테 불려가서 깨진다 엄청 많이
