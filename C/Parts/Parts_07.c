@@ -55,6 +55,6 @@ void Array()
 	for (int i = 0; i < 10; ++i)
 		printf("%d, ", arr2[i]);
 
-
-	
+	// 행렬(Matrix)
+	// 2차원 배열
 }
