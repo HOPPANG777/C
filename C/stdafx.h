@@ -11,5 +11,6 @@
 #include <Windows.h>
 #include <string.h>
 #include <stdbool.h>
+#include <time.h>
 
 #pragma warning(disable : 6031)
