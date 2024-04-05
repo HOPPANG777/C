@@ -4,6 +4,8 @@
 void Parts_07()
 {
 	Array();
+
+	TwoDimensionalArray();
 }
 
 void Array()
@@ -100,8 +102,49 @@ void Array()
 
 	// 1. 유저한테 10개의 수를 입력받아서 입력받은 순서대로 출력하기(배열을 써서)
 	// 2. 주사위 100번 1 ~ 6까지 각각 몇 번 나왔는지 결과 출력
+
+	// 6개의 면
+	// 각각의 숫자가 몇 번 나왔는지
+
+	int arr4[10];
+	int arr5[6] = { 0 };	// 0초기화 그냥 한개만 넣으면 컴파일러가 나머지를 알아서 0으로 초기화 시켜준다.
+	int Fst, Sec, Trd, Four, Five, Six;
+
+	printf("\n\n===== 유저에게 10개의 수를 입력받아 순서대로 출력 =====\n");
+
+	for (int i = 0; i < 10; i++)
+		scanf("%d", &arr4[i]);
+	for (int i = 0; i < 10; i++)
+		printf("%d, ", arr4[i]);
+
+	printf("\n");
+
+	// 1 ~ 6
+	// rand() % 6 -> 0 ~ 5
+	// rand() % 6 + 1 -> 1 ~ 6
+
+	for (int i = 0; i < 100; ++i)
+		++arr5[rand() % 6];
+
+	printf("\n\n===== 주사위 100번 굴린 결과 출력 =====\n");
+	for (int i = 0; i < 6; ++i)
+		printf("%d : %d번\n", i + 1, arr5[i]);
+
+	int arr6[] = { 1, 2, 3, 4, 5 };
+	// 배열길이를 정하지 않아도 초기화 시키는 수의 갯수만큼 컴파일러 스스로 배열의 길이를 정한다.
+
+	printf("\n");
+
 	
+
 	// 행렬(Matrix)
 	// 2차원 배열
+
+	system("pause");
+
+}
+
+void TwoDimensionalArray()
+{
 
 }
