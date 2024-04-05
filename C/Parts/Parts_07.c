@@ -3,7 +3,7 @@
 
 void Parts_07()
 {
-	Array();
+	// Array();
 
 	TwoDimensionalArray();
 }
@@ -146,5 +146,45 @@ void Array()
 
 void TwoDimensionalArray()
 {
+	/*
+	다차원 배열 -> 2차원 배열만 있을순 없다 
+	 
+	하지만 일단 우리는 2차원 배열을 더 중요하게 배우자
 
+	3D가도 2차원 배열만 쓴다.
+
+	1(x.S) 0 0 0	// 이 
+	0 1(y.S) 0 0	// 사이에
+	0 0 1(z.S) 0	// 회전값이 포함되어 있다.
+	x y z 1
+	
+	2차원 배열
+	행렬
+	4 x 4
+	[4][4]	// index 연산이 2개가 된다
+	*/
+	// 0번째 행에 0번째 열에 1을 집어넣겠다.
+	int matrix[2][2];
+	matrix[0][0] = 1;
+	matrix[0][1] = 2;
+	matrix[1][0] = 3;
+	matrix[1][1] = 4;
+	// [y][x]
+	// row-major c/c++/objective-c/pascal // 행 우선
+	// col-major fortra, s-plus, r // 열 우선
+	// GPU에서는 OpenGL,Vulkan인지에(API)따라 행이 우선인지 열이 우선인지 정해진다 
+	
+	printf("===== 2차원 배열 1 원소 =====\n");
+	printf("%d, %d\n%d, %d\n\n", matrix[0][0], matrix[0][1], matrix[1][0], matrix[1][1]);
+
+	int matrix2[2][2] =
+	{
+		{ 1, 2 },
+		{ 3, 4 }
+	};
+
+	int matrix3[2][2] = { 1,2,3,4 };
+
+	// 2차원 배열은 1차원 배열의 시작점을 기억해놓는 것이다 
+	// 
 }
