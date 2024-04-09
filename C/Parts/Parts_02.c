@@ -13,7 +13,7 @@ void DataSize()
 {
 	// 컴퓨터
 	// 데이터를 연산하고, 저장하는 장치
-	// CentralProcessUnit(중앙처리장치) -> 사람의 뇌(근데 이제 여러개 7950X3D -> 16명 손32개
+	// CentralProcessUnit(중앙처리장치) -> 사람의 뇌(근데 이제 여러개 7950X3D -> 16명 팔 32
 	// 똑똑한 애들 소수정예
 	// GraphicsProcessUnit(그래픽처리장치)
 	// 채굴 - 문제
@@ -25,10 +25,11 @@ void DataSize()
 	// 60
 	// 120 144 240 360 540
 	// 저장장치
-	// HDD, SSD, FDD, CD
+	//
 	// 보조기억장치
-	// RAM, ROM(BIOS)
+	// HDD, SSD, FDD, CD
 	// 주기억장치
+	// RAM, ROM(BIOS)
 	// Cache Memory(CPU(장로)전용 창고 혹은 금고(Cache Memory)
 	//
 	// ROM
@@ -102,7 +103,8 @@ void DataSize()
 	 <limits.h> : 자료형들의 제한 범위를 메크로로 기록해둠
 	 SCHAR : Signed Character Minimum
 
-	 최상위비트(부호)+-[1] 지수(n)[8] 가수(m)[23] -> float
+	 최상위비트 : 부호
+	 부호(+-)[1] 지수(n)[8] 가수(m)[23] -> float
 	 부호(+-)[1] 지수(n)[11] 가수(m)[52] -> double
 	 (+-) m * 2^n
 	 +- m * 2^n
