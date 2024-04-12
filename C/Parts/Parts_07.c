@@ -147,17 +147,17 @@ void Array()
 void TwoDimensionalArray()
 {
 	/*
-	다차원 배열 -> 2차원 배열만 있을순 없다 
-	 
+	다차원 배열 -> 2차원 배열만 있을순 없다
+
 	하지만 일단 우리는 2차원 배열을 더 중요하게 배우자
 
 	3D가도 2차원 배열만 쓴다.
 
-	1(x.S) 0 0 0	// 이 
+	1(x.S) 0 0 0	// 이
 	0 1(y.S) 0 0	// 사이에
 	0 0 1(z.S) 0	// 회전값이 포함되어 있다.
 	x y z 1
-	
+
 	2차원 배열
 	행렬
 	4 x 4
@@ -173,7 +173,7 @@ void TwoDimensionalArray()
 	// row-major c/c++/objective-c/pascal // 행 우선
 	// col-major fortra, s-plus, r // 열 우선
 	// GPU에서는 OpenGL,Vulkan인지에(API)따라 행이 우선인지 열이 우선인지 정해진다 
-	
+
 	printf("===== 2차원 배열 1 원소 =====\n");
 	printf("%d, %d\n%d, %d\n\n", matrix[0][0], matrix[0][1], matrix[1][0], matrix[1][1]);
 
@@ -221,7 +221,7 @@ void TwoDimensionalArray()
 	// 동적할당을 해서 다시 배열로 만든다
 	// 2차원 배열까지는 확실히 알아두어야 한다.
 
-	
+
 	/*
 	첫번째 학생 - 국 영 수 사 과
 	두번째 학생 - 국 영 수 사 과
@@ -231,5 +231,7 @@ void TwoDimensionalArray()
 
 	국영수사과 따로 출력후 총점출력과 평점 출력을 하자
 	*/
-	
+
+	int matrix6[][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };	//  열의 개수만 지정해서 초기화
+ 
 }
