@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <Windows.h>
-#include <string.h>
+#include <string.h>		// 문자열 관련 헤더
 #include <stdbool.h>
 #include <time.h>
 
