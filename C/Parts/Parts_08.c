@@ -38,7 +38,106 @@ void Function()
 	int a;
 	a = 10;
 
+	함수는 재정의는 C언어에서는 불가능하다.
+	그러니까 이미 있는 함수는 한번씩만 정의가 가능하다.
+	함수의 선언은 함수의 존재를 알려주는 의미라 여러번 가능하다.
+
+	헤더에서 정의를 안할수도 있다 헤더에서 바로 정의를 할수도 있다.
+	이건 상황따라서 가는것이다.
+
+	함수 호출(함수를 실행 -> 함수 몸체 안에 있는 명령문을 실행한다.
+	함수이름(매개변수);
+	함수의 몸통에 있는 실행문을 함수의 주소를 찾아서 불러서 실행시키는것이다.
+	Parts_08이라는 함수를 선언해서 컴파일러한테 이거 써 하면서 쓰게 시키는것이다.
+	함수
+
+	반환형이 존재 -> 함수의 출력 값이 존재한다.
+	반환형 -> 함수에서 반환될 값의 자료형
+	매개변수 -> 함수의 입력값
+
+	int func1(int a, int b); -> 입력O, 출력O;
+	void func2(int a, int b); -> 입력O, 출력X  
+	반환형이 void란 소리는 함수의 출력값이 존재하지 않는다는 뜻이다.
+	int func3(void); -> 입력X, 출력O
+	void func4(void); -> 입력X, 출력X	
+	// 입력도 출력도 없는데 왜쓰냐 하면은 함수의 핵심은 함수의 그룹화와 재사용이 함수의 핵심이다. 그렇기 때문에 우리는 코드와 분리와 재사용을 위해서 함수의 선언이 가능하다.
+	
+
 	*/
 
+	/*
+	영어 문장 입력
+
+	결과 : 입력받은 문장을 뒤집어서 출력
+	*/
+
+	/*
+	한글 문장 입력
+
+	결과 : 입력받은 문장을 뒤집어서 출력
+	*/
+
+	int num1 = 0, num2 = 0;
+
+	// 아스키코드 0번(정수 0)
+	char oper = '\0';
+
+	printf("수식과 숫자를 입력해주세요 입력 (+, -, *, /) : ");
+	scanf("%d %c %d", &num1, &oper, &num2);
+
+	switch (oper)
+	{
+	case '+':
+	{
+		int result = GetSumValue(num1, num2);
+		printf("%d + %d = %d\n", num1, num2, result);
+	}break;
+	case '-':
+	{
+		int result = GetSubValue(num1, num2);
+		printf("%d - %d = %d\n", num1, num2, result);
+	}break;
+	case '*':
+	{
+		int result = GetMulValue(num1, num2);
+		printf("%d * %d = %d\n", num1, num2, result);
+	}break;
+	case '/':
+	{
+		float result = GetDivValue(num1, num2);
+		printf("%d / %d = %f\n", num1, num2, result);
+	}break;
+	default:
+	{
+		printf("잘못된 수식을 입력했습니다.");
+	}break;
+	}
 
 }
+
+int GetSumValue(int num1, int num2)
+{
+	return num1 + num2;
+}
+
+int GetSubValue(int num1, int num2)
+{
+
+	return num1 - num2;
+}
+
+int GetMulValue(int num1, int num2)
+{
+	return num1 * num2;
+}
+
+float GetDivValue(int num1, int num2)
+{
+	return num1 / (float)num2;
+}
+
+
+
+
+
+
