@@ -85,27 +85,37 @@ void Function()
 	printf("수식과 숫자를 입력해주세요 입력 (+, -, *, /) : ");
 	scanf("%d %c %d", &num1, &oper, &num2);
 
+	/*
+	지금 당장 이 상황에선 왜 함수를 사용하는지 궁금할것이다.
+	다이렉트X2D를 들어가면 함수가 굉장히 길고 많다 
+	그렇기 때문에 그냥 깡으로 코드를 쓰면 알아볼수가 없겠죠
+	코드 작성시의 편의성과 개발 진행을 위해 더욱 사용할수 밖에 없습니다.
+	점프중엔 멈추면 안되잖아 그리고 땅에 닿았을때 딱 멈춰야 하겠죠
+	그리고 매순간마다 오브젝트들과 충돌판정을 해야합니다
+	1초에 1개끼리의 오브젝트들과의 충돌판정도 60프레임만 해도 60번인데
+	화면 안에 모든 오브젝트들의 충돌판정을 하려면 코드가 엄청 길어지겠죠
+	함수를 써서 이러한 코드를 만들어두고 호출해서 써먹으면
+	코드가 훨씬 읽기도 편하고 작성시에도 굉장히 편하겠죠
+	*/
+
 	switch (oper)
 	{
 	case '+':
 	{
-		int result = GetSumValue(num1, num2);
-		printf("%d + %d = %d\n", num1, num2, result);
+		// int result = GetSumValue(num1, num2);	// 이렇게 하면 GetSumValue라는 함수에 있는 실행문을 불러온다.
+		printf("%d + %d = %d\n", num1, num2, GetSumValue(num1, num2));	// 하지만 이렇게 result를 거치지 않고 그냥 함수를 쓰면 더 편하게 쓸수 있다.
 	}break;
 	case '-':
 	{
-		int result = GetSubValue(num1, num2);
-		printf("%d - %d = %d\n", num1, num2, result);
+		printf("%d - %d = %d\n", num1, num2, GetSubValue(num1, num2));
 	}break;
 	case '*':
 	{
-		int result = GetMulValue(num1, num2);
-		printf("%d * %d = %d\n", num1, num2, result);
+		printf("%d * %d = %d\n", num1, num2, GetMulValue(num1, num2));
 	}break;
 	case '/':
 	{
-		float result = GetDivValue(num1, num2);
-		printf("%d / %d = %f\n", num1, num2, result);
+		printf("%d / %d = %f\n", num1, num2, GetDivValue(num1, num2));
 	}break;
 	default:
 	{
