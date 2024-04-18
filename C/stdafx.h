@@ -6,10 +6,15 @@
 // 언어의 표준 헤더
 #include <stdio.h>
 // std -> Standard Input Output(표준입출력) 헤더
-#include <stdlib.h>		// C언어 유틸리티 추가 Ex) system("pause"), system("cls")
-#include <stdbool.h>	// bool 추가해주는 헤더
-#include <string.h>		// 문자열 관련 헤더
-#include <time.h>		// 시간, 날씨 관련 헤더
-#include <Windows.h>	// windows 콘솔창 관련 헤더
+#include <stdlib.h>		
+// C언어 유틸리티 추가 Ex) system("pause"), system("cls")
+#include <stdbool.h>	
+// bool 추가해주는 헤더
+#include <string.h>		
+// 문자열 관련 헤더
+#include <time.h>		
+// 시간, 날씨 관련 헤더
+#include <Windows.h>	
+// windows 콘솔창 관련 헤더
 
 #pragma warning(disable : 6031)
