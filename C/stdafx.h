@@ -17,4 +17,4 @@
 #include <Windows.h>	
 // windows 콘솔창 관련 헤더
 
-#pragma warning(disable : 6031)
+#pragma warning(disable : 6031)	// scanf반환값 경고 무시
