@@ -11,3 +11,6 @@ float GetDivValue(int val1, int val2);
 
 void StaticGlobal();
 void IncreaseValue(int val);
+
+void RecursiveFunction();
+int GetArithemeticSeries(int val);
