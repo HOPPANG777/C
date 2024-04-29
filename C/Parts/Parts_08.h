@@ -14,3 +14,4 @@ void IncreaseValue(int val);
 
 void RecursiveFunction();
 int GetArithemeticSeries(int val);
+int GetArithemeticSeriesTail(int val, int sum);
