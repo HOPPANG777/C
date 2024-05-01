@@ -80,7 +80,25 @@ struct Test
 {
 	int a;			
 	int c;
-	double b;		
-};	
+	double b;
+};
+
+/*
+	C++의 스트럭트는 사실 스트럭트가 아니라 클래스다 그래서
+	C에서의 스트럭트는 완전 다른것이다.
+	구조체의 이름만 정해놓는것이아니라 별명같은걸 지정해주어야 한다.
+	typedef은 다른곳에도 쓰이지만 일단 지금은 새롭게 이름을 지정해준다
+	일종의 별명을 정해준다고 생가하면 된다.
+*/
+
+typedef struct Player
+{
+	int id;
+	int level;
+	int hp;
+	int atk;
+} Player;
 
 void Structure();
+void PrintPlayerInfo(Player player);
+Player PlayerLevelUp(Player up);
