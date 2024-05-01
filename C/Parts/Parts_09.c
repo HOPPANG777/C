@@ -3,7 +3,9 @@
 
 void Parts_09()
 {
-	Structure();
+	Enumeration();
+	// Union();
+	// Structure();
 }
 
 void Structure()
@@ -90,6 +92,53 @@ Player PlayerLevelUp(Player up)
 	up.hp += 10;
 	up.atk++;
 	return up;
+}
+
+void Union()
+{
+	printf("공용체 크기 : %zd\n", sizeof(Data));
+
+	Data data = { 0 };
+	data.intNum = 123456789;
+
+	printf("\n===== Int 할당 결과 =====\n");
+	printf("Int : %d\n", data.intNum);
+	printf("Float : %f\n", data.fltNum);
+	printf("Double : %lf\n", data.dblNum);
+
+	data.fltNum = 3.14f;	
+
+	printf("\n===== Float 할당 결과 =====\n");
+	printf("Int : %d\n", data.intNum);
+	printf("Float : %f\n", data.fltNum);
+	printf("Double : %lf\n", data.dblNum);
+
+	data.dblNum = 3.141592;
+
+	printf("\n===== Double 할당 결과 =====\n");
+	printf("Int : %d\n", data.intNum);
+	printf("Float : %f\n", data.fltNum);
+	printf("Double : %lf\n", data.dblNum);
+
+	/*
+	실행 결과를 보면 싹다 대입한 값을 제외하면 전부 똥값이 들어간걸 볼수가 있다
+	이런걸 보면 솔직히 게임 만들면서 한번도 안쓸만한 극한의 최적화를 위한것이기에
+	임베디드를 할껄 아니라면 자신이 1980년대 게임을 개발하는 슈퍼마리오를 개발할게 아니라면
+	영원히? 그냥 살면서 왠만하면 쓸일이 없을것이다. 그래도 혹시 모르니 진짜 호오오오오옥시 모르니 알아두자
+	*/
+}
+
+void Enumeration()
+{
+	Status status = STATUS_NONE;
+	Motion statis = MOTION_NONE;
+	/*
+	이렇게 같은 이름으로 선언을 하면
+	지금 무슨 문제가 발생했느냐 
+	재정의 문제가 발생을 했는데
+
+	이럴때 뒤나 앞에 접두나 접미를 붙히면 해결된다.
+	*/
 }
 
 /*
