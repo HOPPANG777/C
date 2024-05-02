@@ -30,6 +30,9 @@
     <ClCompile Include="Parts\Parts_09.c">
       <Filter>Parts_09%28UserDefinedDataType%29</Filter>
     </ClCompile>
+    <ClCompile Include="Parts\Parts_10.c">
+      <Filter>Parts_10%28Pointer%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -61,6 +64,9 @@
     <ClInclude Include="Parts\Parts_09.h">
       <Filter>Parts_09%28UserDefinedDataType%29</Filter>
     </ClInclude>
+    <ClInclude Include="Parts\Parts_10.h">
+      <Filter>Parts_10%28Pointer%29</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Parts_01%28Hello_World%29">
@@ -89,6 +95,9 @@
     </Filter>
     <Filter Include="Parts_09%28UserDefinedDataType%29">
       <UniqueIdentifier>{5a18780f-507b-4507-bb89-5c4f0da23779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parts_10%28Pointer%29">
+      <UniqueIdentifier>{8e01c0a6-ce5d-4e79-a480-0fbd27a67551}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
