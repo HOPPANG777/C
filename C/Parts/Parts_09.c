@@ -74,7 +74,7 @@ void Structure()
 		{
 			printf("\n===== LevelUp 결과 =====\n");
 			printf("\n잘못된 플레이어 id를 입력하셨습니다. 정확한 플레이어 id(1 ~ 4)를 입력해주세요.\n\n");
-			
+
 			system("pause");
 			system("cls");
 		}
@@ -106,7 +106,7 @@ void Union()
 	printf("Float : %f\n", data.fltNum);
 	printf("Double : %lf\n", data.dblNum);
 
-	data.fltNum = 3.14f;	
+	data.fltNum = 3.14f;
 
 	printf("\n===== Float 할당 결과 =====\n");
 	printf("Int : %d\n", data.intNum);
@@ -134,11 +134,70 @@ void Enumeration()
 	Motion statis = MOTION_NONE;
 	/*
 	이렇게 같은 이름으로 선언을 하면
-	지금 무슨 문제가 발생했느냐 
+	지금 무슨 문제가 발생했느냐
 	재정의 문제가 발생을 했는데
 
 	이럴때 뒤나 앞에 접두나 접미를 붙히면 해결된다.
 	*/
+
+	printf("===== 열거형 상수 =====\n");
+	printf("Gold : %d\n", ITEM_GOLD);
+	printf("Weapon : %d\n", ITEM_WEAPON);
+	printf("Armor : %d\n", ITEM_ARMOR);
+
+	ItemType itemType = ITEM_WEAPON;
+
+	printf("===== 열거형 상수 =====\n");
+	printf("ItemType is Gold : %s\n", itemType == ITEM_GOLD ? "True" : "False");
+	printf("ItemType is Weapon : %s\n", itemType == ITEM_WEAPON ? "True" : "False");
+	printf("ItemType is Armor : %s\n", itemType == ITEM_ARMOR ? "True" : "False");
+	
+	system("pause");
+	system("cls");
+
+	int selWP;
+
+	if (itemType == ITEM_WEAPON)
+	{
+		bool run = true;
+		WeaponType weaponType = WEAPON_NONE;
+		while (run)
+		{
+			system("pause");
+			system("cls");
+			printf("===== 무기 교체 프로그램 =====\n");
+			printf("\n1. 검 2. 활 3. 총 4. 나가기\n");
+			printf("\n메뉴입력 : ");
+			scanf("%d", &selWP);
+			switch (selWP)
+			{
+			case 1:
+			{
+				printf("\n검을 장착했습니다.\n\n");
+			}break;
+			case 2:
+			{
+				printf("\n활을 장착했습니다.\n\n");
+			}break;
+			case 3:
+			{
+				printf("\n총을 장착했습니다.\n\n");
+			}break;
+			case 4:
+			{
+				printf("\n프로그램을 종료합니다.\n\n");
+				run = false;
+				system("pause");
+			}break;
+			default:
+			{
+				printf("\n잘못된 숫자를 입력하였습니다.\n\n");
+				system("pause"), system("cls");
+			}break;
+			}
+		}
+	}
+
 }
 
 /*

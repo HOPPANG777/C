@@ -190,4 +190,22 @@ enum은 열거형이라고 흔히들 불린다.
 혼자할땐 숫자로 해도 되지만 결국 같이 코딩을 하니까 여러사람과 함께 하기 위해
 */
 
+typedef enum ItemType
+{
+	ITEM_NONE = -1,
+	ITEM_GOLD,
+	ITEM_WEAPON,
+	ITEM_ARMOR,
+	ITEM_MAX_VALUE
+} ItemType;
+
+typedef enum WeaponType
+{
+	WEAPON_NONE = -1,
+	WEAPON_SWORD,
+	WEAPON_BOW,
+	WEAPON_GUN,
+	WEAPON_MAX_VALUE
+} WeaponType;
+
 void Enumeration();
