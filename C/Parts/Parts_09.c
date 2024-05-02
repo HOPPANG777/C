@@ -151,9 +151,67 @@ void Enumeration()
 	printf("ItemType is Gold : %s\n", itemType == ITEM_GOLD ? "True" : "False");
 	printf("ItemType is Weapon : %s\n", itemType == ITEM_WEAPON ? "True" : "False");
 	printf("ItemType is Armor : %s\n", itemType == ITEM_ARMOR ? "True" : "False");
-	
+
 	system("pause");
 	system("cls");
+
+	if (itemType == ITEM_WEAPON)
+	{
+		WeaponType weaponType = WEAPON_NONE;
+
+		do
+		{
+			system("cls");
+			printf("===== 무기 교체 프로그램 =====\n\n");
+			printf("1. 검 2. 활 3. 총 4. 나가기\n\n메뉴 입력 : ");
+			scanf("%d", &weaponType);
+			--weaponType;
+			printf("\n");
+
+			switch (weaponType)
+			{
+			case WEAPON_SWORD:
+				printf("현재 무기 : 검");
+				break;
+			case WEAPON_BOW:
+				printf("현재 무기 : 활");
+				break;
+			case WEAPON_GUN:
+				printf("현재 무기 : 총");
+				break;
+			case WEAPON_MAX_VALUE:
+				printf("프로그램을 종료합니다.");
+				break;
+			default:
+				printf("잘못된 숫자를 입력하셨습니다. 다시 입력해주세요.");
+				break;
+			}
+
+			printf("\n\n");
+			system("pause");
+		} while (weaponType != WEAPON_MAX_VALUE);
+	}
+
+}
+
+/*
+레벨1 올리면
+체력 10, 공격력 1 오르고
+
+레벨업 대상 선택
+그리고 레벨업 결과 출력
+
+반복문 구조 0되면 프로그램 종료
+
+===== LevelUp 프로그램 =====
+
+LevelUp 대상 플레이어 선택 (1 ~ 4) : 1
+
+===== LevelUp 결과 =====
+플레이어 1 정보 [ Level : 6, HP : 60, ATK : 7 ]
+*/
+
+/*
 
 	int selWP;
 
@@ -198,21 +256,4 @@ void Enumeration()
 		}
 	}
 
-}
-
-/*
-레벨1 올리면
-체력 10, 공격력 1 오르고
-
-레벨업 대상 선택
-그리고 레벨업 결과 출력
-
-반복문 구조 0되면 프로그램 종료
-
-===== LevelUp 프로그램 =====
-
-LevelUp 대상 플레이어 선택 (1 ~ 4) : 1
-
-===== LevelUp 결과 =====
-플레이어 1 정보 [ Level : 6, HP : 60, ATK : 7 ]
-*/
+	*/
