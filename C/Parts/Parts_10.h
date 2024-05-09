@@ -10,3 +10,5 @@ void Parts_10();
 */
 
 void Pointer();
+void SwapByValue(int a, int b);
+void SwapByPtr(int* a, int* b);
