@@ -3,7 +3,9 @@
 
 void Parts_10()
 {
-	Pointer();
+	// Pointer();
+	// InitializeArray();
+	PointerToPointer();
 }
 
 void Pointer()
@@ -122,6 +124,28 @@ void Pointer()
 	
 	printf("\n===== 값 교환 후 =====\n");
 	printf("지역 변수 num1(%p) : %d, 지역 변수 num2(%p) : %d\n", &num1, num1, &num2, num2);
+
+	// 이건 인트와 가깝기 때문에 포인터를 통한 값의 조작이 상수화가 되는것이다 간접참조화를 통한 변경이 불가능해진다.
+	const int* constPtr1 = &num1;
+
+	// 포인터와 더 가깝기 때문에 값의 주소값의 변경을 할수가 없다.
+	int* const constPtr2 = &num2;
+
+	// 이건 두 개 다 붙였기 때문에 변경을 아예 할수 없도록 막아둔것
+	const int* const constPtr3 = &num1;
+
+	// *constPtr1 = 10; 불가능
+	constPtr1 = &num2;
+
+	*constPtr2 = 20;
+	// constPtr2 = &num1; // 불가능
+
+	// 둘 다 불가능
+	// *constPtr3 = 10;
+	// constPtr3 = &num1;
+
+
+
 }
 
 void SwapByValue(int a, int b)
@@ -147,3 +171,113 @@ void SwapByPtr(int* a, int* b)
 
 	printf("매개 변수 a(%p) : %d, 매개 변수 b(%p) : %d\n", a, *a, b, *b);
 }
+
+void InitializeArray()
+{
+	int arr1[5] = { 1,2,3,4,5 };
+	int arr2[5] = { 1,2,3,4,5 };
+
+	const int len1 = sizeof(arr1) / sizeof(arr1[0]);
+	const int len2 = sizeof(arr2) / sizeof(arr2[0]);
+
+	printf("===== 배열 1 원소 (%lld) =====\n", sizeof(arr1));
+	for (int i = 0; i < len1; ++i)
+		printf("%d, ", *(arr1 + i));
+
+	int* const ptr1 = arr2;
+	printf("\n\n===== 배열 2 원소 (%lld) =====\n", sizeof(ptr1));
+	for (int i = 0; i < len2; ++i)
+		printf("%d, ", ptr1[i]);
+	/*
+	포인터 연산
+
+	*(ptr1 + 1)
+	포인터 연산이 어떻게 작동을 하는가
+	arr2의 시작점의 주소를 ptr1에 넣고
+	+1을 하면
+	포인터는 보이드 포인터 말고 다른 포인터들은 자료형의 크기를 알고 있다.
+	보이드 포인터는 당연히 포인터 연산 안된다
+
+	인트 값만큼 건너뛰어라 건너뛰어서 그 주소값이 되는것이다.
+	ptr1 + 1 - 1은 다시 0x00으로 돌아온다 만약 +2를 하면 여기서 2만큼 건너뛰어라 하면
+	0x08로 간다
+
+	간접참조를 했다 그 주소값에 들어있는 인트 값을 간접참조가 된다 처음에 0번지에 있는 값 처음에 1이
+	나온거고 i가 1일때 2가 나온거다
+
+	ptr[i]
+	대신에 인덱스 연산을 해도 된다.
+	포인터 연산을 해서 인덱스 안에 들어있는 값만큼 포인터 더하기 연산을 해서
+	그 값만큼 간접참조를 한거다
+
+	우리가 여태까지 써오던 인덱스 연산은 포인터 연산으로 간접참조를 한것이다
+	배열 이름으로도 포인터 연산이 가능하다.
+
+	둘이 차이가 없어 보이지만
+	사이즈 오브 배열이름 하면 1번째는 20나오는 배열의 크기
+	포인터는 배열의 이름을 아무리 담아도 8바이트 포인터 크기가 나온다.
+
+	이게 왜 중요하냐
+
+
+	*/
+
+	int arr3[5] = { 0 };
+
+	const int len3 = sizeof(arr3) / sizeof(arr3[0]);
+
+	InitArrayByPtr(arr3, len3);
+
+	printf("\n\n===== 배열 3 원소 (%lld) =====\n", sizeof(arr3));
+	for (int i = 0; i < len3; ++i)
+		printf("%d, ", arr3[i]);
+
+	printf("\n");
+}
+
+// void InitArray(int a[])
+//{
+//	const int len = sizeof(a) / sizeof(a[0]);
+//	/*
+//	배열을 전한게 아니라 시작점의 주소를 나타내는 포인터를 넣은거다
+//	그러면 어째서 첫번째랑 2번째만 되느냐
+//	포인터는 8바이트 2개로 나누면 4바이트 2개만 들어간거다.
+//	포인터는 사이즈오브로 배열을 제대로 체크할수 없다.
+//	*/
+//	for (int i = 0; i < len; ++i)
+//		a[i] = i + 1;	
+//}
+
+void InitArrayByPtr(int* arr, int len)
+{
+	for (int i = 0; i < len; ++i)
+		arr[i] = i + 1;
+}
+
+void PointerToPointer()
+{
+	/*
+	이중 포인터 
+	영어로 PointerToPointer
+
+	이중 포인터는 뭐하는거냐
+	어떤 변수의 주소값을 저장한 포인터의 주소값을 저장한 포인터
+	프레임워크 설계단에서 자주 쓰인다.
+	고오급 프로그래머가 되고 싶다면 이중 포인터를 쓰는 방법을 알아두어야한다.
+	프로그래머의 프로그래머
+	엔진 프로그래머라든지, 
+
+	DX배워보면 많다 MS에서 만든 윈도우 그래픽 제작 API
+	*/
+
+	int num1 = 0;
+	int num2 = 0;
+
+	int* ptr = &num1;
+	int** ptrToPtr = &ptr;
+}
+
+
+
+
+
