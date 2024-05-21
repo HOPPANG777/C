@@ -30,7 +30,8 @@ int main(void)	// <- mainÇÔ¼ö·Î
 	// Parts_07();
 	// Parts_08();
 	// Parts_09();
-	Parts_10();
+	// Parts_10();
+	Parts_11();
 
 	// num = 10;
 
