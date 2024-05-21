@@ -275,6 +275,44 @@ void PointerToPointer()
 
 	int* ptr = &num1;
 	int** ptrToPtr = &ptr;
+
+	**ptrToPtr = 10;
+
+	*ptrToPtr = &num2;		// 간접참조2번
+	**ptrToPtr = 20;	
+
+	printf("===== 이중 포인터 간접 참조 결과 =====\n");
+	printf("num1 : %d, %p\n", num1, &num1);
+	printf("num2 : %d, %p\n", num2, &num2);
+	printf("int* : %p, %p int** : %p, %p\n", ptr, &ptr, ptrToPtr, &ptrToPtr);
+	// 함수를 통해서 전달되는 포인터의 주소값을 변경하고 싶을때
+
+	int* ptr1 = &num1;
+	int* ptr2 = &num2;
+
+	printf("\n===== 포인터 교환 전 =====\n");
+	printf("%p : %d, %p : %d\n", ptr1, *ptr1, ptr2, *ptr2);
+	
+	// SwapByP(ptr1, ptr2);
+	SwapByPP(&ptr1, &ptr2);
+
+	printf("\n===== 포인터 교환 후 =====\n");
+	printf("%p : %d, %p : %d\n", ptr1, *ptr1, ptr2, *ptr2);
+
+}
+
+void SwapByP(int* ptr1, int* ptr2)
+{
+	int* temp = ptr1;
+	ptr1 = ptr2;
+	ptr2 = temp;
+}
+
+void SwapByPP(int** pp1, int** pp2)
+{
+	int* temp = *pp1;
+	*pp1 = *pp2;
+	*pp2 = temp;
 }
 
 
