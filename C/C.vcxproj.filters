@@ -36,6 +36,9 @@
     <ClCompile Include="Parts\Parts_11.c">
       <Filter>Parts_11%28FunctionPointer%29</Filter>
     </ClCompile>
+    <ClCompile Include="Parts\Parts_12.c">
+      <Filter>Parts_12%28MemoryAllocation%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -73,6 +76,9 @@
     <ClInclude Include="Parts\Parts_11.h">
       <Filter>Parts_11%28FunctionPointer%29</Filter>
     </ClInclude>
+    <ClInclude Include="Parts\Parts_12.h">
+      <Filter>Parts_12%28MemoryAllocation%29</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Parts_01%28Hello_World%29">
@@ -107,6 +113,9 @@
     </Filter>
     <Filter Include="Parts_11%28FunctionPointer%29">
       <UniqueIdentifier>{c4d62871-097a-4859-82fe-7eb3afb67ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parts_12%28MemoryAllocation%29">
+      <UniqueIdentifier>{8692711f-73e6-4b9a-aef2-49aade5e8421}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
