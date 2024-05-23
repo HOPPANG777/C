@@ -12,18 +12,18 @@ void MemoryAllocation()
 		동적할당
 
 		정적이냐 동적이냐를 이야기할때
-		동적이란건 런타임이란걸 의미를 한다 즉 
+		동적이란건 런타임이란걸 의미를 한다 즉
 		프로그램이 실행중일때를 의미한다.
 
-		정적은 무엇이냐 
+		정적은 무엇이냐
 		컴파일 타임이란걸로 기준을 잡는다
 		컴파일러가 번역하는 시간대
-		
+
 		컴파일할때 결정되는 것을 정적
 		런타임일때 결정할수 있는것을 동적
 
 		동적할당이란
-		프로그램 실행 중에 사용자가 필요한 만큼 메모리를 할당하거나 
+		프로그램 실행 중에 사용자가 필요한 만큼 메모리를 할당하거나
 		해제할 수 있는 기능
 
 		메모리 누수(Memory Leak)
@@ -32,5 +32,46 @@ void MemoryAllocation()
 		게임 같은 실시간 프로그램은 특히 더 메모리 누수를 주의해야한다.
 		ㅈ같은 베데스다 새끼들 이새끼들은 20년째 만드는 게임마다 똑같이 메모리누수가 한결같이 일어나 시발련들
 		5분만 지나기 시작하면 메모리 누수가 시작되요!! 이걸 회사가 안고치고 유저가 고쳐요!! 시발 병신
+
+		x86이냐 x64냐에 따라서 해당 운영체제가 사용할수있는 메모리의 최대치를 땡겨놓고 생각한다가
+		가상메모리다 우리가 하는 이야기들은 모두 가상 메모리에서 일어난다.
+
+		비주얼스튜디오는 기본 최소 스택을 1MB로 잡아논다
+
+		동적할당을 한다
+
+
 	*/
+
+	/*
+	괄호 안의 크기 만큼 동적할당 malloc(동적할당할크기) -> MemoryAllocation
+	calloc -> ClearAllocation
+	realloc -> ReAllocation
+
+	*/
+
+	int* intPtr = (int*)malloc(sizeof(int));
+	assert(intPtr != NULL);	// 어썰트가 작동하는 조건은 거짓일때 어썰션을 불러와서 작동한다.	//
+	float* fltPtr = (float*)malloc(sizeof(float));
+	assert(fltPtr != NULL);
+
+	*intPtr = 10;
+	*fltPtr = 3.14;
+
+	printf("===== 동적 할당 결과 =====\n");
+	printf("int*(%p) : %d\n", intPtr, *intPtr);
+	printf("float*(%p) : %f\n", fltPtr, *fltPtr);
+
+	free(fltPtr);
+	fltPtr = NULL;
+	free(intPtr);
+	intPtr = NULL;
+
+	if (intPtr != NULL)
+		*intPtr = 10;
+
+	//printf("\n===== 해제 결과 =====\n");
+	//printf("int*(%p) : %d\n", intPtr, *intPtr);
+	//printf("float*(%p) : %f\n", fltPtr, *fltPtr);
+
 }
