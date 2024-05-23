@@ -62,10 +62,8 @@ void MemoryAllocation()
 	printf("int*(%p) : %d\n", intPtr, *intPtr);
 	printf("float*(%p) : %f\n", fltPtr, *fltPtr);
 
-	free(fltPtr);
-	fltPtr = NULL;
-	free(intPtr);
-	intPtr = NULL;
+	SAFE_FREE(fltPtr);	
+	SAFE_FREE(intPtr);
 
 	if (intPtr != NULL)
 		*intPtr = 10;
@@ -74,4 +72,15 @@ void MemoryAllocation()
 	//printf("int*(%p) : %d\n", intPtr, *intPtr);
 	//printf("float*(%p) : %f\n", fltPtr, *fltPtr);
 
+	int len = 0;
+
+	printf("\n초기 배열 크기 입력 : ");
+	scanf("%d", &len);
+	
+	int* arr = (int*)malloc(sizeof(int) * len);
+	assert(arr != NULL);
+
+
+
+	SAFE_FREE(arr);
 }

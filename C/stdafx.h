@@ -20,3 +20,6 @@
 #include <assert.h>
 
 #pragma warning(disable : 6031)	// scanf반환값 경고 무시
+
+#define SAFE_FREE(p) if (p) { free(p); p = NULL; }
+
