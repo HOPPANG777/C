@@ -80,7 +80,54 @@ void MemoryAllocation()
 	int* arr = (int*)malloc(sizeof(int) * len);
 	assert(arr != NULL);
 
+	// 서수
+	int ordinal = 0;
+	int input = 0;
 
+	printf("\n");
+
+	while (true)
+	{
+		printf("%d번째 정수 입력 : ", ordinal + 1);
+		scanf("%d", &input);
+
+		if (input == 0)
+			break;
+
+		if (ordinal >= len)
+		{
+			len *= 2;
+			int* newArr = (int*)malloc(sizeof(int) * len);
+			assert(newArr != NULL);
+
+			for (int i = 0; i < ordinal; ++i)
+				newArr[i] = arr[i];
+			
+			SAFE_FREE(arr);
+			arr = newArr;
+			printf("배열 재할당 완료! 현재 배열 주소 : %p\n", arr);
+		}
+
+		arr[ordinal++] = input;
+
+	}
+	
+	printf("\n===== 동적 할당 배열 원소 =====\n");
+	for (int i = 0; i < ordinal; ++i)
+		printf("%d, ", arr[i]);
+	
+	printf("\n");
 
 	SAFE_FREE(arr);
+}
+
+void TowDimensionalArrayMemoryAllocation()
+{
+	int row = 0;
+	int col = 0;
+
+	printf("행렬 크기 입력 : ");
+	scanf("%d %d", &row, &col);
+
+	// 2차원 배열 matrix를 동적 할당
 }
