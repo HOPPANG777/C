@@ -130,4 +130,36 @@ void TowDimensionalArrayMemoryAllocation()
 	scanf("%d %d", &row, &col);
 
 	// 2차원 배열 matrix를 동적 할당
+	int** matrix = (int**)malloc(sizeof(int*) * row);
+	assert(matrix != NULL);
+	//for (int i = 0; i < row; ++i)
+	//{ 
+	//	matrix[i] = (int*)malloc(sizeof(int) * col);
+	//	assert(matrix[i] != NULL);
+	//}
+
+	matrix[0] = (int*)malloc(sizeof(int) * row * col);
+	assert(matrix[0] != NULL);
+	for (int i = 1; i < row; ++i)
+		matrix[i] = matrix[i - 1] + col;
+
+	int num = 0;
+	for (int i = 0; i < row; ++i)
+		for (int j = 0; j < col; ++j)
+			matrix[i][j] = ++num;
+
+	printf("===== 행렬 원소 =====\n");
+	for (int i = 0; i < row; ++i)
+	{
+		for (int j = 0; j < col; ++j)
+			printf("%03d, ", matrix[i][j]);
+
+		printf("\n");
+	}
+
+	//for (int i = 0; i < row; ++i)
+	//	SAFE_FREE(matrix[i]);
+	SAFE_FREE(matrix[0]);
+
+	SAFE_FREE(matrix);
 }
