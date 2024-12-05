@@ -21,7 +21,7 @@ int globalVal = 20;	// 전역 변수 또한 데이터 영역에서 저장이 된다.
 int main(void)	// <- main함수로
 {
 	// return -> 함수를 종료
-	// Parts_01();
+	Parts_01();
 	// Parts_02();
 	// Parts_03();
 	// Parts_04();
@@ -33,7 +33,7 @@ int main(void)	// <- main함수로
 	// Parts_10();
 	// Parts_11();
 	// Parts_12();
-	Parts_13();
+	// Parts_13();
 	
 	// num = 10;
 
