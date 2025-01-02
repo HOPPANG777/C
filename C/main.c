@@ -54,7 +54,7 @@ Player 클래스로 만든 player1은 객체라고 부른다.
 int main(void)	// <- main함수로
 {
 	// return -> 함수를 종료
-	Parts_01();
+	//Parts_01();
 	// Parts_02();
 	// Parts_03();
 	// Parts_04();
